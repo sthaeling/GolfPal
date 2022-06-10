@@ -19,5 +19,25 @@ class UserView(viewsets.ModelViewSet):
     queryset = User.objects.all()
 
 
+class GolfClubView(viewsets.ModelViewSet):
+    serializer_class = GolfClubSerializer
+    queryset = GolfClub.objects.all()
+
+
+class GolfCourseView(viewsets.ModelViewSet):
+    serializer_class = GolfCourseSerializer
+    queryset = GolfCourse.objects.all()
+
+
+class HoleView(viewsets.ModelViewSet):
+    serializer_class = HoleSerializer
+    queryset = Hole.objects.all()
+
+
+class UserHoleScoreView(viewsets.ModelViewSet):
+    serializer_class = UserHoleScoreSerializer
+    queryset = UserHoleScore.objects.all()
+
+
 def index(request):
     return HttpResponse('<h1>Index!</h1>')

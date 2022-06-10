@@ -6,6 +6,7 @@ class UserAdmin(admin.ModelAdmin):
     list_display = (
         '_firstName',
         '_lastName',
+        '_email',
         '_handicap',
         '_phoneNumber'
     )
@@ -19,7 +20,8 @@ class GolfClubAdmin(admin.ModelAdmin):
         '_city',
         '_website',
         '_email',
-        '_phoneNumber'
+        '_phoneNumber',
+        '_imageUrl'
     )
 
 
@@ -46,6 +48,7 @@ class UserHoleScoreAdmin(admin.ModelAdmin):
     list_display = (
         '_user',
         '_hole',
+        '_date',
         '_score'
     )
 

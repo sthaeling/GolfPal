@@ -19,8 +19,12 @@ from rest_framework import routers
 
 from app import views
 
-router = routers.DefaultRouter(trailing_slash=False)
-router.register(r'user', views.UserView)
+router = routers.DefaultRouter()
+router.register(r'user', views.UserView, 'user')
+router.register(r'golfclub', views.GolfClubView, 'golfClub')
+router.register(r'golfcourse', views.GolfCourseView, 'golfCourse')
+router.register(r'hole', views.HoleView, 'hole')
+router.register(r'userholescore', views.UserHoleScoreView, 'userHoleScore')
 
 urlpatterns = [
     path('', views.index, name='index'),
