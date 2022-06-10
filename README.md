@@ -32,9 +32,9 @@ Activate local dev environent
 source venv/bin/activate
 ````
 
-Activate local dev environent
+Install django
 ````
-source venv/bin/activate
+pip3 install djangorestframework django-cors-headers
 ````
 
 #### Frontend
