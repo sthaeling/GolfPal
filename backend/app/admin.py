@@ -1,9 +1,5 @@
 from django.contrib import admin
-from .models import User
-from .models import GolfClub
-from .models import GolfCourse
-from .models import Hole
-from .models import UserHoleScore
+from .models import User, GolfClub, GolfCourse, Hole, UserHoleScore
 
 
 class UserAdmin(admin.ModelAdmin):
