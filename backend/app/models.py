@@ -53,5 +53,8 @@ class UserHoleScore(models.Model):
     _hole = models.ForeignKey(Hole, on_delete=models.CASCADE)
     _score = models.IntegerField()
 
+    def __str__(self):
+        return str(self._score)
+
     def __int__(self):
         return self._score
