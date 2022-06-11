@@ -6,7 +6,7 @@ class User(models.Model):
     _lastName = models.CharField(max_length=48)
     _email = models.EmailField(max_length=128, blank=True, null=True)
     _password = models.CharField(max_length=128)
-    _handicap = models.IntegerField()
+    _handicap = models.IntegerField(blank=True, null=True)
     _phoneNumber = models.CharField(max_length=32, blank=True, null=True)
 
     def __str__(self):

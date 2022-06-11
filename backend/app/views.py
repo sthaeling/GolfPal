@@ -11,6 +11,7 @@ from .serializers import UserSerializer,\
 
 from .models import User, GolfClub, GolfCourse, Hole, UserHoleScore
 
+from django_filters.rest_framework import DjangoFilterBackend
 
 # Create your views here.
 
@@ -27,11 +28,15 @@ class GolfClubView(viewsets.ModelViewSet):
 class GolfCourseView(viewsets.ModelViewSet):
     serializer_class = GolfCourseSerializer
     queryset = GolfCourse.objects.all()
+    filter_backends = [DjangoFilterBackend]
+    filterset_fields = ['_golfClub']
 
 
 class HoleView(viewsets.ModelViewSet):
     serializer_class = HoleSerializer
     queryset = Hole.objects.all()
+    filter_backends = [DjangoFilterBackend]
+    filterset_fields = ['_golfCourse']
 
 
 class UserHoleScoreView(viewsets.ModelViewSet):
