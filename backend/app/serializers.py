@@ -9,6 +9,8 @@ class UserSerializer(serializers.ModelSerializer):
             'id',
             '_firstName',
             '_lastName',
+            '_email',
+            '_password',
             '_handicap',
             '_phoneNumber'
         )
@@ -25,7 +27,8 @@ class GolfClubSerializer(serializers.ModelSerializer):
             '_city',
             '_website',
             '_email',
-            '_phoneNumber'
+            '_phoneNumber',
+            '_imageUrl'
         )
 
 
@@ -61,5 +64,6 @@ class UserHoleScoreSerializer(serializers.ModelSerializer):
             'id',
             '_user',
             '_hole',
+            '_date',
             '_score'
         )

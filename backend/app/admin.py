@@ -4,8 +4,10 @@ from .models import User, GolfClub, GolfCourse, Hole, UserHoleScore
 
 class UserAdmin(admin.ModelAdmin):
     list_display = (
+        'id',
         '_firstName',
         '_lastName',
+        '_email',
         '_handicap',
         '_phoneNumber'
     )
@@ -13,18 +15,21 @@ class UserAdmin(admin.ModelAdmin):
 
 class GolfClubAdmin(admin.ModelAdmin):
     list_display = (
+        'id',
         '_name',
         '_streetHouseNumber',
         '_zip',
         '_city',
         '_website',
         '_email',
-        '_phoneNumber'
+        '_phoneNumber',
+        '_imageUrl'
     )
 
 
 class GolfCourseAdmin(admin.ModelAdmin):
     list_display = (
+        'id',
         '_golfClub',
         '_name',
         '_holesAmount',
@@ -33,6 +38,7 @@ class GolfCourseAdmin(admin.ModelAdmin):
 
 class HoleAdmin(admin.ModelAdmin):
     list_display = (
+        'id',
         '_golfCourse',
         '_courseNameIdentifier',
         '_holeNumber',
@@ -44,8 +50,10 @@ class HoleAdmin(admin.ModelAdmin):
 
 class UserHoleScoreAdmin(admin.ModelAdmin):
     list_display = (
+        'id',
         '_user',
         '_hole',
+        '_date',
         '_score'
     )
 
